@@ -1,0 +1,27 @@
+class Animal:
+    def __init__(self, nombre):
+        self.nombre = nombre
+    
+    def hacer_sonido(self):
+        print(f"{self.nombre} hace un sonido.")
+
+class Mamífero(Animal):
+    def __init__(self, nombre, tipo_sangre):
+        super().__init__(nombre)
+        self.tipo_sangre = tipo_sangre
+    
+    def mostrar_tipo_sangre(self):
+        print(f"{self.nombre} es un mamífero con sangre {self.tipo_sangre}.")
+
+class Perro(Mamífero):
+    def __init__(self, nombre, tipo_sangre, raza):
+        super().__init__(nombre, tipo_sangre)
+        self.raza = raza
+    
+    def ladrar(self):
+        print(f"{self.nombre} de raza {self.raza} está ladrando.")
+
+perro = Perro("Max", "caliente", "Labrador")
+perro.hacer_sonido() 
+perro.mostrar_tipo_sangre()  
+perro.ladrar()  
