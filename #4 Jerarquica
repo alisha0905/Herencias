@@ -1,0 +1,28 @@
+class Vehiculo:
+    def __init__(self, marca):
+        self.marca = marca
+    
+    def descripcion(self):
+        print(f"Este es un vehículo de la marca {self.marca}.")
+
+class Coche(Vehiculo):
+    def __init__(self, marca, modelo):
+        super().__init__(marca)
+        self.modelo = modelo
+    
+    def descripcion(self):
+        print(f"Este coche es un {self.marca} {self.modelo}.")
+
+class Moto(Vehiculo):
+    def __init__(self, marca, cilindrada):
+        super().__init__(marca)
+        self.cilindrada = cilindrada
+    
+    def descripcion(self):
+        print(f"Esta moto es de marca {self.marca} y tiene {self.cilindrada}cc.")
+
+coche = Coche("Toyota", "Corolla")
+moto = Moto("Yamaha", 250)
+
+coche.descripcion()  
+moto.descripcion() 
