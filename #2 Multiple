@@ -1,0 +1,23 @@
+class Estudiante:
+    def __init__(self, nombre, carrera):
+        self.nombre = nombre
+        self.carrera = carrera
+    
+    def estudiar(self):
+        print(f"{self.nombre} está estudiando {self.carrera}.")
+
+class Deportista:
+    def __init__(self, deporte):
+        self.deporte = deporte
+    
+    def entrenar(self):
+        print(f"Entrenando para {self.deporte}.")
+
+class EstudianteDeportista(Estudiante, Deportista):
+    def __init__(self, nombre, carrera, deporte):
+        Estudiante.__init__(self, nombre, carrera)
+        Deportista.__init__(self, deporte)
+
+estudiante_deportista = EstudianteDeportista("Carlos", "Ingeniería", "Fútbol")
+estudiante_deportista.estudiar()  
+estudiante_deportista.entrenar()  
