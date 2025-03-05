@@ -1,0 +1,22 @@
+using System;
+
+public interface IVehiculo
+{
+    void Moverse();
+}
+
+public class Coche : IVehiculo
+{
+    public void Moverse()
+    {
+        Console.WriteLine("El coche se mueve.");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        IVehiculo vehiculo = new Coche();
+        vehiculo.Moverse();
+    }
